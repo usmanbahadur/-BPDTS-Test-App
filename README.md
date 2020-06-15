@@ -4,9 +4,13 @@
 
 #### Main App Component 
 Main page initiates and displays user’s data. It also contains getUsers() that contain two httpClient  get methods that loads JSON data.
+
 •	First users by city   /city/{city}/users
 
 •	Second method calls all users using httpClient get   https://bpdts-test-app.herokuapp.com/users after calling all users a distance calculation is performed with Harvesine’s formula that uses longitude, latitude calculation to filter users whose current coordinates are within 50 miles of London.
+
+  LONDON_LAT = 51.509865;
+  LONDON_LONG = -0.118092;
 
 #### Model Component
 Contains the current user’s data structure of BPDTS API.                    
