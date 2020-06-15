@@ -16,9 +16,7 @@ export class AppComponent implements OnInit {
   UsersByRadius = [];
   Users = '';
   miles = 50;
-  distance;
-  user;
-  Newuser;
+
   // Latitude and longitude of London
   LONDON_LAT = 51.509865;
   LONDON_LONG = -0.118092;
@@ -30,7 +28,6 @@ export class AppComponent implements OnInit {
   }
 
   getUsers() {
-
     this.httpClient.get('/assets/data.json').pipe(map(data => data as Array<Users>))
       .subscribe(data => {
         this.LonUsers = data;
