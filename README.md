@@ -1,4 +1,7 @@
-# BPDTSTestApp
+# BPDTS-Test-App
+This is A REST based API that uses the API hosted on https://bpdts-test-app.herokuapp.com developed using Angular.
+
+APP Structure 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
