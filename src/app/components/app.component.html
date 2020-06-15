@@ -1,0 +1,110 @@
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 18px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2 {
+    position: relative;
+  }
+
+  p {
+
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .content {
+    display: flex;
+    margin: 32px auto;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card.highlight-card {
+    background-color: #94366a;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
+</style>
+
+
+<div class="content" role="main">
+  <div class="card highlight-card card-small">
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp;{{ title }}&nbsp;&nbsp; </h2>
+  </div>
+  <br> <br>
+  <button (click)="getUsers()">
+    <h1>Get Users</h1>
+  </button>
+  <br>
+  <h2 class="card">London Users </h2>
+
+  <table>
+    <thead>
+        <th>id</th>
+        <th>first_name</th>
+        <th>last_name</th>
+        <th>email</th>
+        <th>ip_address</th>
+        <th>latitude</th>
+        <th>longitude</th>
+        <th>city</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of LonUsers">
+            <td>{{item.id}}</td>
+            <td>{{item.first_name}}</td>
+            <td>{{item.last_name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.ip_address}}</td>
+            <td>{{item.latitude}}</td>
+            <td>{{item.longitude}}</td>
+            <td>{{item.city}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+  <h2 class="card"> Users within 50 miles of London coordinates</h2>
+  <table>
+    <thead>
+        <th>id</th>
+        <th>first_name</th>
+        <th>last_name</th>
+        <th>email</th>
+        <th>ip_address</th>
+        <th>latitude</th>
+        <th>longitude</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of UsersByRadius">
+            <td>{{item.id}}</td>
+            <td>{{item.first_name}}</td>
+            <td>{{item.last_name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.ip_address}}</td>
+            <td>{{item.latitude}}</td>
+            <td>{{item.longitude}}</td>
+
+        </tr>
+    </tbody>
+</table>
+
+
+</div>
+
+
+<router-outlet></router-outlet>

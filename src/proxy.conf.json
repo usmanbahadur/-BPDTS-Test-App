@@ -1,0 +1,12 @@
+{
+  "/users": {
+    "target": "https://bpdts-test-app.herokuapp.com/city/London",
+    "secure": false,
+    "pathRewrite": {
+      "^/users": ""
+    },
+    "changeOrigin": true ,
+    "logLevel": "debug"
+  }
+}
+
