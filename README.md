@@ -12,7 +12,7 @@ Main page initiates and displays user’s data. It also contains getUsers() that
   LONDON_LAT = 51.509865;
   LONDON_LONG = -0.118092;
 
-#### Model Component
+#### Model Component Folder
 Contains the current user’s data structure of BPDTS API.                    
 
 #### API Service Component 
@@ -22,7 +22,7 @@ Contains the current user’s data structure of BPDTS API.
 https://www.movable-type.co.uk/scripts/latlong.html
 
 
-#### Assets  
+#### Assets Folder
 Contain London user’s JSON data file and all users’ data. API was called using POSTMAN and then imported to the app./assets in JSON format. 
 https://bpdts-test-app.herokuapp.com/users 
 
@@ -50,6 +50,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-### Further help
+## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
